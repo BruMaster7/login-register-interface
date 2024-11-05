@@ -24,7 +24,7 @@ public class App implements IUsuarioAutenticable {
     
     private App() {
         this.usuarios = new ArrayList<>();
-        this.usuarios.add(new Administrador("pepe","pepe","pepePepe","pepe@pepe"));
+        this.usuarios.add(new Administrador("Admin","pepe","pepePepe","pepe@pepe"));
   
     }
     

@@ -1,5 +1,3 @@
-package obligatorio;
-
 import java.awt.EventQueue;
 
 import obligatorio.presentacion.frmLogin;

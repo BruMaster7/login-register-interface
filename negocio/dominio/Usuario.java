@@ -66,8 +66,9 @@ public abstract class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario [nick=" + nick + ", nombreCompleto=" + nombreCompleto + ", email=" + email
-                + ", intentosFallidos=" + intentosFallidos + ", bloqueado=" + bloqueado + "]";
+        return "Usuario [nick=" + nick + "\n" + ", nombreCompleto=" + nombreCompleto + "\n" +
+        		", email=" + email + "\n" + ", intentosFallidos=" + intentosFallidos +
+        		"\n" + ", bloqueado=" + bloqueado + "]" + "\n" + "\n";
     }
 }
 

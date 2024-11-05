@@ -17,7 +17,6 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-
 import obligatorio.negocio.App;
 import obligatorio.negocio.IUsuarioAutenticable;
 
@@ -100,14 +99,20 @@ public class frmLogin extends JFrame {
 		        String usuario = JTNombre.getText();
 		        IUsuarioAutenticable servicios = App.getInstancia();
 		       
-		        boolean autenticado = servicios.ingresar(usuario, clave);
-		        
+		        boolean autenticado = servicios.ingresar(usuario, clave);   	
 		        if (autenticado) {
 		            dispose();
 		            JOptionPane.showMessageDialog(null, "Bienvenido al sistema", "INGRESASTE",
 		                    JOptionPane.INFORMATION_MESSAGE);
+		            if(usuario.equals("Admin")) {
 		            frmRegister r = new frmRegister();
-		            r.setVisible(true);
+		            r.setVisible(true);} 
+		            else {
+		            	JOptionPane.showMessageDialog(null, "Bienvenido al sistema, eres un usuario no administrador",
+		            			"INGRESASTE",
+			                    JOptionPane.INFORMATION_MESSAGE);	
+		            }
+		            
 		        } else {
 		            JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto", "ERROR",
 		                    JOptionPane.ERROR_MESSAGE);
